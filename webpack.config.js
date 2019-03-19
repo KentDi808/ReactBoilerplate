@@ -1,4 +1,6 @@
-var config = {
+const path = require('path');
+
+module.exports = {
   entry: './source/index.js',
 
   output: {
@@ -13,19 +15,34 @@ var config = {
   },
   
   module: {
-    loaders: [
+    rules: [
       {
-        test: /\.jsx?$/,
-        exclude: /node_modules/,
-        loader: 'babel-loader',
-
-        query: {
-          presets: [['env', {'targets': {'browsers': ['last 2 versions']}}], 'react', 'stage-0'],
-          plugins: ['transform-decorators-legacy']
-        }
+        test: /.jsx?$/,
+        include: [
+          path.resolve(__dirname, 'source')
+        ],
+        exclude: [
+          path.resolve(__dirname + 'node_modules')
+        ],
+        use: [{
+          loader: 'babel-loader',
+          options: {
+            presets: [
+              [
+                '@babel/env', {
+                  'targets': {
+                    'browsers': ['Chrome >= 59']
+                  }
+                }
+              ],
+              '@babel/react'
+            ],
+            plugins: [
+              '@babel/plugin-proposal-class-properties'
+            ]
+          }
+        }]
       }
     ]
   }
 }
-
-module.exports = config;

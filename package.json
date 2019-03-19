@@ -1,22 +1,19 @@
 {
-  "name": "ReactApp",
+  "name": "react-boilerplate-small",
   "version": "1.0.0",
   "main": "index.js",
+  "repository": "https://github.com/KentDi808/ReactBoilerplateSmall",
   "dependencies": {
-    "babel-core": "^6.17.0",
-    "babel-loader": "^6.2.0",
-    "babel-plugin-add-module-exports": "^0.1.2",
-    "babel-plugin-react-html-attrs": "^2.0.0",
-    "babel-plugin-transform-class-properties": "^6.3.13",
-    "babel-plugin-transform-decorators-legacy": "^1.3.4",
-    "babel-preset-env": "^1.6.1",
-    "babel-preset-react": "^6.3.13",
-    "babel-preset-stage-0": "^6.3.13",
-    "react": "^16.2.0",
-    "react-dom": "^16.2.0",
-    "webpack": "^3.12.0",
+    "@babel/core": "^7.3.4",
+    "@babel/plugin-proposal-class-properties": "^7.3.4",
+    "@babel/preset-env": "^7.3.4",
+    "@babel/preset-react": "^7.0.0",
+    "babel-loader": "^8.0.5",
+    "react": "^16.8.4",
+    "react-dom": "^16.8.4",
+    "webpack": "^4.29.6",
     "webpack-cli": "^3.1.0",
-    "webpack-dev-server": "^2.11.3"
+    "webpack-dev-server": "^3.2.1"
   },
   "scripts": {
     "dev": "webpack-dev-server --hot",
