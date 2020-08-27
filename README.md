@@ -4,11 +4,11 @@ A simple react boilerplate. It loads a single component and is great for test ap
 After cloning the project run
 
 ```
-npm install
+yarn install
 ```
 
 To run in dev mode
 
 ```
-npm run dev
+yarn run dev
 ```
